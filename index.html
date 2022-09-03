@@ -8,14 +8,20 @@
 </head>
 <script>
     function checkPassword() {
-        var pw1 = document.getElementById("pass1");  
-        var pw2 = document.getElementById("pass2");  
-        if(pw1 != pw2)  
+        let pw1 = document.getElementById("pass1").value;  
+        let pw2 = document.getElementById("pass2").value;  
+        if(pw1 == pw2)  
         {   
-          alert("Incorrect");  
-        }else {  
-        alert("Correct");  
-        }  
+            var pass = document.getElementById("errormsg");
+            pass.style.color ="green";
+            pass.innerHTML = "Correct!"
+        } 
+        if(pw1 != pw2){
+            var inpass = document.getElementById("errormsg");
+            inpass.style.color ="red";  
+            inpass.innerHTML = "Incorrect!"
+    
+        }   
     
     }
     </script>
